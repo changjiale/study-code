@@ -52,7 +52,7 @@ import java.util.*;
  *
  * @author changjiale
  */
-class P1_TwoSum{
+public class P1_TwoSum{
     public static void main(String[] args) {
 
         Solution solution = new P1_TwoSum().new Solution();
