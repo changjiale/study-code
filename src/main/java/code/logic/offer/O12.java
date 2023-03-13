@@ -7,6 +7,8 @@ import java.util.Arrays;
  */
 public class O12 {
 
+
+
     public static boolean exist(char[][] board, String word) {
         char[] words = word.toCharArray();
 

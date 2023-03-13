@@ -44,7 +44,6 @@ public class QuickSort {
             quickSort(arr, i+1, end);
         }
     }
-
     private void quickSortV2(int[] arr, int start, int end) {
         if (start >=0 && end <= arr.length-1 && start < end) {
             int i = start;
@@ -71,8 +70,8 @@ public class QuickSort {
                arr[i] = flag;
             }
 
-            quickSort(arr, start, i-1);
-            quickSort(arr, i+1, end);
+            quickSortV2(arr, start, i-1);
+            quickSortV2(arr, i+1, end);
         }
     }
 

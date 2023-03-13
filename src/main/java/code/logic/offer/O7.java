@@ -1,7 +1,9 @@
 package code.logic.offer;
 
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 class TreeNode {
@@ -28,33 +30,29 @@ class TreeNode {
  *
  */
 public class O7 {
+
+
     int[] preorder;
 
-    Map<Integer, Integer> preMap = new HashMap<>();
+    Map<Integer, Integer> inMap = new HashMap<>();
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         this.preorder = preorder;
         //记录中序遍历下标
         for (int i = 0; i < inorder.length; i++) {
-            preMap.put(inorder[i], i);
+            inMap.put(inorder[i], i);
         }
         return findNode(0, 0, inorder.length-1);
     }
 
     public TreeNode findNode(int root, int left, int right) {
-        if (left > right)  {
+        if (left > right) {
             return null;
         }
-        //构造根节点
         TreeNode node = new TreeNode(preorder[root]);
-        //获取中序遍历根节点位置
-        int index = preMap.get(preorder[root]);
-        //构造左子树
-        node.left = findNode(root+1, left, index-1);
-        //构造右子数
-        node.right = findNode(root + index-left + 1, index+1, right);
-
+        int index = inMap.get(preorder[root]);
+        node.left =findNode(root+1, left, index - 1);
+        node.right=findNode(root + index -left+1 ,index +1, right);
         return node;
-
     }
 
     public void preSout(TreeNode root) {
@@ -86,6 +84,8 @@ public class O7 {
     }
 
     public static void main(String[] args) {
+
+
         O7 o7 = new O7();
         int[] preorder = {3, 9, 20 , 15, 7};
         int[] inorder = {9, 3 , 15 ,20 ,7};
