@@ -3,6 +3,7 @@ package code.leetcode.codetop;
 public class TOP_206 {
 
     public ListNode reverseList(ListNode head) {
+
         ListNode prev = null;
         ListNode curr = head;
         while (curr != null) {
