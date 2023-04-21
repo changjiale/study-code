@@ -27,7 +27,6 @@ package code.leetcode.codetop;
 public class TOP_5 {
 
     public String longestPalindrome(String s) {
-
         String res ="";
         int max = 0;
         for (int i = 0; i < s.length(); i++) {

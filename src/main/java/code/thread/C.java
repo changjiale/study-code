@@ -8,6 +8,7 @@ public class C {
     private static Lock lock = new ReentrantLock();
     private static int cnt = 0;
 
+
     static class ThreadA extends Thread {
         @Override
         public void run() {

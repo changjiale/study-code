@@ -22,6 +22,8 @@ public class B {
 
 }
 
+
+
 class PrintThread implements Runnable {
 
     private String name;

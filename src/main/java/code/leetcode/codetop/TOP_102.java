@@ -28,7 +28,6 @@ public class TOP_102 {
         if (root == null) {
             return ret;
         }
-
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
         while (!queue.isEmpty()) {
